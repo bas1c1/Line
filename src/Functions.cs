@@ -26,16 +26,6 @@ namespace Lines
             }
         }
     }
-    //NOT WORKING!
-    public class Eval
-    {
-        public static void execute(List<KeyValuePair<Tokens, string>> value)
-        {
-            int result = 0;
-            KeyValuePair<Tokens, string> val = new KeyValuePair<Tokens, string>(Tokens.NUM, result.ToString());
-            Variables.vars["eval"] = value;
-        }
-    }
 
     public class PythonExecute
     {
