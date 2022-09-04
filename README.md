@@ -1,3 +1,2 @@
 <img src="icon.png">
-# Line
-Line Programming Language
+<h2> Line Programming Language </h2>
