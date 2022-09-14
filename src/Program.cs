@@ -9,7 +9,7 @@ namespace Lines
         static void Main(string[] args)
         {
             List<string> lines = new List<string>();
-            string[] temp = File.ReadAllText("test.bl").Split('\n');
+            string[] temp = File.ReadAllText(args[0]).Split('\n');
             foreach (string str in temp)
             {
                 lines.Add(str);
