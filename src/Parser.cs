@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using IronPython;
@@ -194,6 +194,9 @@ namespace Lines
                         case "exit":
                             name = Function.exit;
                             break;
+                        case "input":
+                            name = Function.input;
+                            break;
                         default:
                             break;
                     }
@@ -251,6 +254,9 @@ namespace Lines
                     break;
                 case Function.exit:
                     Exit.execute(value);
+                    break;
+                case Function.input:
+                    Input.execute(value);
                     break;
                 default:
                     break;
