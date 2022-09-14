@@ -11,7 +11,8 @@ namespace Lines
         none,
         print,
         exit,
-        eval
+        eval,
+        input
     }
 
     public class Print
@@ -24,6 +25,19 @@ namespace Lines
                     Console.WriteLine(((KeyValuePair<Tokens, string>)Variables.vars[value[i].Value]).Value);
                 else
                     Console.WriteLine(value[i].Value);
+            }
+        }
+    }
+
+    public class Input
+    {
+        public static void execute(List<KeyValuePair<Tokens, string>> value)
+        {
+            for (int i = 0; i < value.Count; i++)
+            {
+                string result = Console.ReadLine();
+                KeyValuePair<Tokens, string> val = new KeyValuePair<Tokens, string>(Tokens.STRING, result);
+                Variables.vars["input"] = val;
             }
         }
     }
