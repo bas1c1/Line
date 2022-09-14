@@ -1,4 +1,4 @@
-﻿using IronPython.Hosting;
+using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using System;
 using System.Collections.Generic;
@@ -40,14 +40,15 @@ namespace Lines
     {
         public static void execute(List<KeyValuePair<Tokens, string>> value)
         {
-            int result = 0;
+            int? result = null;
             int num1;
             int num2;
 
             if (Variables.vars.ContainsKey(value[0].Value))
-                num1 = int.Parse(((KeyValuePair<Tokens, string>)Variables.vars[value[1].Value]).Value);
+                num1 = int.Parse(((KeyValuePair<Tokens, string>)Variables.vars[value[0].Value]).Value);
             else
-                num1 = int.Parse(value[1].Value);
+                num1 = int.Parse(value[0].Value);
+
             if (Variables.vars.ContainsKey(value[1].Value))
                 num2 = int.Parse(((KeyValuePair<Tokens, string>)Variables.vars[value[1].Value]).Value);
             else
