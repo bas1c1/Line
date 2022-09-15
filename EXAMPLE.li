@@ -6,8 +6,8 @@ $
 ifeq ? num 85 nexttwo
 
 :next
-eval(8 3 "*")
-print(eval)
+eval(8 3 "*" output)
+print(output)
 exit()
 $
 
