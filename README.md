@@ -1,4 +1,3 @@
 <img src="icon.png">
-<h2> Lines Programming Language </h2>
 
-A simple interpreted programming language
+## You can use this for creating your own programming language!
